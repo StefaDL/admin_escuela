@@ -52,7 +52,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'escuela.urls'
-
+# hola
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
