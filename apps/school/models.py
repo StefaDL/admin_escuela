@@ -15,3 +15,18 @@ class Docente(models.Model):
     nombre = models.CharField(max_length=65)
     apellido = models.CharField(max_length=65)
     materia = models.ForeignKey(Materia, null=False, on_delete=models.CASCADE)
+
+class Estudiante(models.Model):
+    id_estudiante = models.AutoField(mas_length= 12,primary_key=True)
+    nombre = models.CharField(max_length=65)
+    apellido = models.CharField(max_length=65)
+    edad = models.IntegerField()
+    correo = models.CharField(max_length=80)
+    curso = models.IntegerField()
+    docente = models.CharField(max_length=12, primary_key=True)
+
+
+class Curso(models.Model):
+    id_curso = models.AutoField(primary_key=True)
+    paralelo =models.IntegerField()
+    grado =  models.TextField()
